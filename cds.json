@@ -1,0 +1,128 @@
+{
+  "name": "Luma Latch Centralized Design System v1.2",
+  "version": "1.2.0",
+  "author": "Forensic Luxury Protocol",
+  "target": "Awwwards / Webby / Site of the Year 2026",
+  "authority": "Immutable Visual & Motion Contract — Single Source of Truth",
+  "principles": {
+    "ethos": "Forensic Luxury",
+    "mood": "Colder than luxury, warmer than aerospace",
+    "motion": "Inevitable, not reactive",
+    "light": "520nm emerald is the only protagonist signal",
+    "depth": "Content exists on suspended glass strata",
+    "narrativeArc": ["Disorientation", "Emergence", "Inspection", "Resolution", "Afterimage"]
+  },
+  "root": {
+    "scroll": {
+      "variables": ["--progress", "--velocity"],
+      "observer": "ScrollTrigger on body → updates :root"
+    },
+    "physics": {
+      "lenis": {
+        "duration": 1.2,
+        "easing": "expoOut",
+        "smoothWheel": true
+      }
+    }
+  },
+  "palette": {
+    "void": "#050505",
+    "dim": "#0A1F1A",
+    "mid": "#0C2D23",
+    "emission": "#B4FFC8",
+    "emissionDim": "#10b981",
+    "textPrimary": "#F5F5F5",
+    "textSecondary": "#A0A0A0",
+    "textTertiary": "#6B7280"
+  },
+  "glass": {
+    "surface": "rgba(255, 255, 255, 0.03)",
+    "border": "rgba(255, 255, 255, 0.08)",
+    "highlight": "rgba(255, 255, 255, 0.15)",
+    "shadow": "0 25px 50px -12px rgba(0, 0, 0, 0.55)",
+    "blur": "40px",
+    "chromaticAberration": "2px",
+    "specular": "radial-gradient(circle at 20% 20%, rgba(255,255,255,0.12) 0%, transparent 60%)",
+    "edgeBevel": "inset 0 1px 0 rgba(255,255,255,0.08), inset 0 -1px 0 rgba(0,0,0,0.25)"
+  },
+  "typography": {
+    "primary": "Fraunces, serif",
+    "secondary": "Inter, monospace",
+    "axes": {
+      "wght": {
+        "min": 100,
+        "max": 900,
+        "default": 300
+      },
+      "SOFT": {
+        "min": 0,
+        "max": 100,
+        "default": 0
+      }
+    },
+    "sizes": {
+      "display": "clamp(4.5rem, 12vw, 10rem)",
+      "h1": "clamp(3.5rem, 8vw, 7rem)",
+      "h2": "clamp(2.5rem, 6vw, 5rem)",
+      "h3": "2.25rem",
+      "body": "1.125rem",
+      "readout": "0.875rem",
+      "caption": "0.75rem"
+    },
+    "tracking": {
+      "display": "-0.04em",
+      "h1": "-0.03em",
+      "h2": "-0.02em",
+      "body": "0.01em",
+      "readout": "0.08em"
+    }
+  },
+  "motion": {
+    "ritual": ["Crack", "Drift", "Flush"],
+    "eases": {
+      "crack": "power2.in",
+      "drift": "none",
+      "flush": "expo.inOut"
+    },
+    "durations": {
+      "crack": 0.4,
+      "drift": "scroll-dependent",
+      "flush": 0.6
+    },
+    "breathing": {
+      "cycle": [4, 6, 8, 12],
+      "amplitude": [20, 15, 10, 8],
+      "perLayer": true
+    },
+    "tremor": {
+      "amplitude": "calc(2px * var(--velocity) / 1000)",
+      "duration": 0.04,
+      "repeat": 5,
+      "yoyo": true
+    }
+  },
+  "scotopic": {
+    "anchor": "#B4FFC8",
+    "dimFactor": 0.3,
+    "grainOpacity": 0.03,
+    "peripheralSuppression": 0.3
+  },
+  "performance": {
+    "target": "Lighthouse 95+",
+    "rules": [
+      "will-change: transform, opacity, filter",
+      "lazy-load secondary assets",
+      "preload hero spine",
+      "no heavy blur > 18px on mobile"
+    ]
+  },
+  "prohibitions": [
+    "spring easing",
+    "default GSAP eases",
+    "CSS glow tricks",
+    "skeuomorphic textures",
+    "flat layouts",
+    "instant visibility",
+    "left-aligned content dumps"
+  ]
+}
